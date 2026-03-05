@@ -6,77 +6,50 @@
 <title>Roxanne Joy Martin | UI Designer</title>
 
 <style>
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial, Helvetica, sans-serif
-}
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial, Helvetica, sans-serif}
 
-body{
-background:#F3E3D0;
-color:#333;
-}
+body{background:#FFF5E4;color:#333}
 
 nav{
 position:fixed;
 top:0;
 width:100%;
-background:#D6E5FA;
-padding:15px 40px;
+background:#FFC4C4;
+padding:18px 40px;
 display:flex;
-justify-content:space-between;
+justify-content:center;
 align-items:center;
-box-shadow:0 2px 10px rgba(0,0,0,0.05)
+box-shadow:0 2px 10px rgba(0,0,0,0.05);
+z-index:1000
 }
 
-nav a{
-margin-left:20px;
+nav .menu a{
+margin:0 18px;
 text-decoration:none;
 color:#333;
 font-weight:600;
+font-size:15px
 }
 
-nav a:hover{
-color:#D77FA1;
-}
+nav .menu a:hover{color:#850E35}
 
-section{
-min-height:100vh;
-padding:120px 10%;
-}
+section{min-height:100vh;padding:120px 10%}
 
-h1{
-font-size:42px;
-margin-bottom:10px
-}
+h1{font-size:42px;margin-bottom:10px}
+h2{font-size:28px;margin-bottom:25px}
+p{line-height:1.6}
 
-h2{
-font-size:28px;
-margin-bottom:20px
-}
-
-p{
-line-height:1.6
-}
-
-.hero{
-display:flex;
-align-items:center;
-gap:60px
-}
+.hero{display:flex;align-items:center;gap:60px;flex-wrap:wrap}
 
 .hero img{
 width:220px;
 height:220px;
 border-radius:50%;
 object-fit:cover;
-border:6px solid #BAABDA
+border:6px solid #EE6983
 }
 
-.highlight{
-color:#D77FA1
-}
+.highlight{color:#850E35}
 
 .grid{
 display:grid;
@@ -85,7 +58,7 @@ gap:20px
 }
 
 .card{
-background:#D6E5FA;
+background:#FFC4C4;
 padding:25px;
 border-radius:12px;
 box-shadow:0 5px 15px rgba(0,0,0,0.05)
@@ -93,7 +66,7 @@ box-shadow:0 5px 15px rgba(0,0,0,0.05)
 
 .skills span{
 display:inline-block;
-background:#BAABDA;
+background:#EE6983;
 color:white;
 padding:8px 14px;
 border-radius:20px;
@@ -101,31 +74,41 @@ margin:6px;
 font-size:14px
 }
 
-.project{
-border-left:4px solid #D77FA1
+.project{border-left:4px solid #850E35}
+
+/* CERTIFICATE FRAME */
+.cert-card{
+background:#FFC4C4;
+padding:15px;
+border-radius:12px;
+box-shadow:0 5px 15px rgba(0,0,0,0.05);
+text-align:center
 }
 
-.contact a{
-display:block;
-margin-top:10px;
-color:#D77FA1;
-text-decoration:none
+.cert-card img{
+width:100%;
+height:180px;
+object-fit:cover;
+border-radius:8px;
+margin-bottom:10px;
+border:3px solid #EE6983
 }
+
+.contact a{display:block;margin-top:10px;color:#850E35;text-decoration:none}
 
 footer{
 text-align:center;
 padding:30px;
-background:#D6E5FA;
+background:#FFC4C4;
 border-top:1px solid rgba(0,0,0,0.05)
 }
-</style>
 
+</style>
 </head>
 <body>
 
 <nav>
-<div><b>RJM</b></div>
-<div>
+<div class="menu">
 <a href="#home">Home</a>
 <a href="#projects">Projects</a>
 <a href="#skills">Tools & Skills</a>
@@ -205,11 +188,30 @@ border-top:1px solid rgba(0,0,0,0.05)
 
 <div class="grid">
 
-<div class="card">IT Essentials: PC Hardware and Software – Cisco</div>
-<div class="card">Python Essentials 2 – Cisco</div>
-<div class="card">Networking Basics – Cisco</div>
-<div class="card">English for IT – Cisco</div>
-<div class="card">Exploring Internet of Things with Cisco Packet Tracer – Cisco</div>
+<div class="cert-card">
+<img src="certificate1.jpg" alt="Certificate">
+<p>IT Essentials: PC Hardware and Software – Cisco</p>
+</div>
+
+<div class="cert-card">
+<img src="certificate2.jpg" alt="Certificate">
+<p>Python Essentials 2 – Cisco</p>
+</div>
+
+<div class="cert-card">
+<img src="certificate3.jpg" alt="Certificate">
+<p>Networking Basics – Cisco</p>
+</div>
+
+<div class="cert-card">
+<img src="certificate4.jpg" alt="Certificate">
+<p>English for IT – Cisco</p>
+</div>
+
+<div class="cert-card">
+<img src="certificate5.jpg" alt="Certificate">
+<p>Exploring Internet of Things with Cisco Packet Tracer – Cisco</p>
+</div>
 
 </div>
 </section>
