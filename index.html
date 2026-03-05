@@ -8,13 +8,14 @@
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:Arial, Helvetica, sans-serif}
 
-body{background:#F3E3D0;color:#333}
+body{background:#F8F9FF;color:#333}
 
+/* NAVBAR */
 nav{
 position:fixed;
 top:0;
 width:100%;
-background:#FFC4C4;
+background:#E8EAFD;
 padding:18px 40px;
 display:flex;
 justify-content:center;
@@ -31,7 +32,7 @@ font-weight:600;
 font-size:15px
 }
 
-nav .menu a:hover{color:#850E35}
+nav .menu a:hover{color:#6C63FF}
 
 section{min-height:100vh;padding:120px 10%}
 
@@ -46,27 +47,30 @@ width:220px;
 height:220px;
 border-radius:50%;
 object-fit:cover;
-border:6px solid #EE6983
+border:6px solid #FF7AA2
 }
 
-.highlight{color:#850E35}
+.highlight{color:#6C63FF}
 
+/* GRID */
 .grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
 gap:20px
 }
 
+/* CARDS */
 .card{
-background:#FFC4C4;
+background:#E8EAFD;
 padding:25px;
 border-radius:12px;
 box-shadow:0 5px 15px rgba(0,0,0,0.05)
 }
 
+/* SKILLS */
 .skills span{
 display:inline-block;
-background:#EE6983;
+background:#6C63FF;
 color:white;
 padding:8px 14px;
 border-radius:20px;
@@ -74,11 +78,11 @@ margin:6px;
 font-size:14px
 }
 
-.project{border-left:4px solid #850E35}
+.project{border-left:4px solid #FF7AA2}
 
-/* CERTIFICATE FRAME */
+/* CERTIFICATES */
 .cert-card{
-background:#FFC4C4;
+background:#E8EAFD;
 padding:15px;
 border-radius:12px;
 box-shadow:0 5px 15px rgba(0,0,0,0.05);
@@ -91,15 +95,22 @@ height:180px;
 object-fit:cover;
 border-radius:8px;
 margin-bottom:10px;
-border:3px solid #EE6983
+border:3px solid #FF7AA2
 }
 
-.contact a{display:block;margin-top:10px;color:#850E35;text-decoration:none}
+/* CONTACT */
+.contact a{
+display:block;
+margin-top:10px;
+color:#6C63FF;
+text-decoration:none
+}
 
+/* FOOTER */
 footer{
 text-align:center;
 padding:30px;
-background:#FFC4C4;
+background:#E8EAFD;
 border-top:1px solid rgba(0,0,0,0.05)
 }
 
