@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -86,7 +87,13 @@ background:#E8EAFD;
 padding:15px;
 border-radius:12px;
 box-shadow:0 5px 15px rgba(0,0,0,0.05);
-text-align:center
+text-align:center;
+transition:0.3s;
+}
+
+.cert-card:hover{
+transform:translateY(-6px);
+box-shadow:0 10px 25px rgba(0,0,0,0.1);
 }
 
 .cert-card img{
@@ -96,6 +103,41 @@ object-fit:cover;
 border-radius:8px;
 margin-bottom:10px;
 border:3px solid #FF7AA2
+}
+
+.cert-card button{
+margin-top:10px;
+padding:8px 16px;
+border:none;
+background:#6C63FF;
+color:white;
+border-radius:8px;
+cursor:pointer;
+}
+
+.cert-card button:hover{
+background:#FF7AA2;
+}
+
+/* POPUP */
+.popup{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.8);
+display:flex;
+align-items:center;
+justify-content:center;
+z-index:2000;
+}
+
+.popup img{
+max-width:90%;
+max-height:90%;
+border-radius:10px;
+box-shadow:0 10px 30px rgba(0,0,0,0.3);
 }
 
 /* CONTACT */
@@ -202,26 +244,31 @@ border-top:1px solid rgba(0,0,0,0.05)
 <div class="cert-card">
 <img src="certificate1.jpg" alt="Certificate">
 <p>IT Essentials: PC Hardware and Software – Cisco</p>
+<button onclick="openCert(this)">View Certificate</button>
 </div>
 
 <div class="cert-card">
 <img src="certificate2.jpg" alt="Certificate">
 <p>Python Essentials 2 – Cisco</p>
+<button onclick="openCert(this)">View Certificate</button>
 </div>
 
 <div class="cert-card">
 <img src="certificate3.jpg" alt="Certificate">
 <p>Networking Basics – Cisco</p>
+<button onclick="openCert(this)">View Certificate</button>
 </div>
 
 <div class="cert-card">
 <img src="certificate4.jpg" alt="Certificate">
 <p>English for IT – Cisco</p>
+<button onclick="openCert(this)">View Certificate</button>
 </div>
 
 <div class="cert-card">
 <img src="certificate5.jpg" alt="Certificate">
 <p>Exploring Internet of Things with Cisco Packet Tracer – Cisco</p>
+<button onclick="openCert(this)">View Certificate</button>
 </div>
 
 </div>
@@ -242,6 +289,30 @@ border-top:1px solid rgba(0,0,0,0.05)
 <footer>
 <p>© 2026 Roxanne Joy Martin | UI Designer</p>
 </footer>
+
+<script>
+
+function openCert(btn){
+
+let imgSrc = btn.parentElement.querySelector("img").src;
+
+let popup = document.createElement("div");
+popup.classList.add("popup");
+
+let img = document.createElement("img");
+img.src = imgSrc;
+
+popup.appendChild(img);
+
+popup.onclick = function(){
+popup.remove();
+}
+
+document.body.appendChild(popup);
+
+}
+
+</script>
 
 </body>
 </html>
